@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Background">
+
+    <!-- Title Bar 20%-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/TitleBar"
+        android:padding="16dp">
+
+        <!-- Name 25%-->
+        <TextView
+            android:text="Joseph"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/Name"
+            android:layout_weight="2.5"
+            android:textSize="24sp" />
+
+        <!-- Cash 20%-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/Cash">
+
+            <!-- Cash text 75%-->
+            <TextView
+                android:text="10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/cash_text"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+        <!-- Popularity 20%-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/Popularity"
+            android:layout_weight="2">
+
+            <!-- Popularity - text 75%-->
+            <TextView
+                android:text="1fan"
+                android:layout_height="match_parent"
+                android:id="@+id/popularity_text"
+                android:layout_weight="3"
+                android:layout_width="0dp" />
+        </LinearLayout>
+
+        <!-- Players 20%-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/Players"
+            android:layout_weight="2">
+
+            <!-- Players - Text 75%-->
+            <TextView
+                android:text="1000000"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/players_text"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Button 15%-->
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_preferences"
+            android:background="@drawable/rounded_button"
+            android:id="@+id/imageButton"
+            android:layout_weight="1.5" />
+
+    </LinearLayout>
+
+    <!-- Main Menu 80% -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:id="@+id/MainScreen">
+
+        <!-- Changing Room 25% -->
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/rounded_button"
+            android:id="@+id/Changing_Room"
+            android:layout_weight="2.5"
+            android:background="#00000000"
+            android:layout_margin="5dp" />
+
+        <!-- Level Up 50%-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:id="@+id/level_up"
+            android:clipChildren="false">
+
+            <!-- Background -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/rounded_rectangle"
+                android:id="@+id/purple_spinner"
+                android:layout_weight="1" />
+
+            <!-- Lvl up button -->
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/rounded_button"
+                android:id="@+id/level_up_button"
+                android:layout_margin="20dp"
+                android:background="#00000000"
+                android:clickable="false" />
+
+            <!-- Lvl Level -->
+            <TextView
+                android:text="Lvl 20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Level"
+                android:gravity="center"
+                android:layout_margin="5dp" />
+        </RelativeLayout>
+
+        <!-- Fans 25% -->
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/rounded_button"
+            android:id="@+id/imageButton4"
+            android:layout_weight="2.5"
+            android:background="#00000000"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+</LinearLayout>
