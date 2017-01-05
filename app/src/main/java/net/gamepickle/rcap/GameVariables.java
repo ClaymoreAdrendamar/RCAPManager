@@ -13,6 +13,7 @@ public class GameVariables{
     private int cash;
     private int popularity;
     private int player_stats;
+    private int player_happiness;
     private Context mContext;
 
     public GameVariables(Context context) {
@@ -31,6 +32,8 @@ public class GameVariables{
         String popularity_key = "POPULARITY";
         String player_stats_key = "PLAYER_STATS";
         String name_key = "NAME";
+        String player_happiness_key = "PLAYER HAPPINESS";
+        String opponent_strength = "OPPONENT STRENGTH";
 
         // Cash Variable
         // If it exists read from it else create it with a value of 0
@@ -43,6 +46,8 @@ public class GameVariables{
         // Player_stats Variable
         // If it exists read from it else create it with a value of 0
         setPlayer_stats(settings.getInt(player_stats_key, 0));
+
+        setPlayer_happiness(settings.getInt(player_happiness_key, 0));
 
     }
 
@@ -84,4 +89,13 @@ public class GameVariables{
         }
         setPlayer_stats(amount);
     }
+
+    public void setPlayer_happiness(int amount, boolean increment) {
+        if(increment) {
+            amount += player_happiness;
+        }
+        setPlayer_happiness(amount);
+    }
+
+
 }
