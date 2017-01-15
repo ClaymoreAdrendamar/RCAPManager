@@ -31,9 +31,9 @@ public class GameVariables{
         String cash_key = "CASH";
         String popularity_key = "POPULARITY";
         String player_stats_key = "PLAYER_STATS";
+        String player_happiness_key = "PLAYER_HAPPINESS";
         String name_key = "NAME";
-        String player_happiness_key = "PLAYER HAPPINESS";
-        String opponent_strength = "OPPONENT STRENGTH";
+
 
         // Cash Variable
         // If it exists read from it else create it with a value of 0
@@ -45,9 +45,11 @@ public class GameVariables{
 
         // Player_stats Variable
         // If it exists read from it else create it with a value of 0
+
         setPlayer_stats(settings.getInt(player_stats_key, 0));
 
         setPlayer_happiness(settings.getInt(player_happiness_key, 0));
+
 
     }
 
@@ -83,19 +85,10 @@ public class GameVariables{
         t.setText(String.valueOf(player_stats));
     }
 
-    public void setPlayer_stats(int amount, boolean increment) {
-        if(increment) {
-            amount += player_stats;
-        }
-        setPlayer_stats(amount);
+
+    public void setPlayer_happiness(int amount) {
+        player_happiness = amount;
+        //TextView t = (TextView)((Activity)mContext).findViewById(R.id.happiness_text);
+        //t.setText(String.valueOf(player_happiness));
     }
-
-    public void setPlayer_happiness(int amount, boolean increment) {
-        if(increment) {
-            amount += player_happiness;
-        }
-        setPlayer_happiness(amount);
-    }
-
-
 }
