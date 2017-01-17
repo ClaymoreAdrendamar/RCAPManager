@@ -2,6 +2,7 @@ package net.gamepickle.rcap;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         gameVariables = new GameVariables(this);
 
         gameVariables.setPlayer_stats(50);
@@ -31,11 +33,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-        public Pair<Integer, Integer> match(){
-            int rcapGoals = 0;
-            int otherGoals = 0;
-            return new Pair<Integer,Integer>(rcapGoals, otherGoals);
-        }
+
 
 
 
