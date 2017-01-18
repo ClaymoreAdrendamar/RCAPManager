@@ -14,6 +14,10 @@ import java.util.Random;
 public class MatchSimulation extends AppCompatActivity {
 
 
+
+    Button play = (Button) findViewById(R.id.play);
+    Button pause = (Button) findViewById(R.id.pause);
+    Button home = (Button) findViewById(R.id.Home);
     int rcapStats = 75;
     int otherTeamStats = 50;
     int rcapHappiness = 50;
@@ -24,6 +28,30 @@ public class MatchSimulation extends AppCompatActivity {
     TextView scoreOther = (TextView) findViewById(R.id.notRcap);
     TextView t = (TextView) findViewById(R.id.textView);
 
+    CountDownTimer timer = new CountDownTimer(60000,3000) {
+        @Override
+        public void onTick(long millisUntilFinished) {
+            match(rcapStats,otherTeamStats,rcapHappiness);
+            scoreRcap.setText(String.valueOf(rcapScore));
+            scoreOther.setText(String.valueOf(otherScore));
+            home.setEnabled(false);
+        }
+
+        @Override
+        public void onFinish() {
+            if(rcapScore>otherScore){
+                t.setText("You win!!!");
+            }else if(rcapScore<otherScore){
+                t.setText("You lose...");
+            }else {
+                t.setText("It's a tie.");
+            }
+            clicked=true;
+            home.setEnabled(true);
+
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,45 +59,25 @@ public class MatchSimulation extends AppCompatActivity {
         setContentView(R.layout.activity_match_simulation);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-        final Button startMatch = (Button) findViewById(R.id.button);
-        startMatch.setOnClickListener(new View.OnClickListener(){
+
+        home.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Intent main=new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(main);
+            }
+        });
 
-
-                if (clicked ==false){
-
-                    new CountDownTimer(60000,3000){
-                        public void onTick(long millisecondsTilFinished){
-
-                            match(rcapStats,otherTeamStats,rcapHappiness);
-                            scoreRcap.setText(String.valueOf(rcapScore));
-                            scoreOther.setText(String.valueOf(otherScore));
-
-                        }
-                        public void onFinish(){
-
-                            if(rcapScore>otherScore){
-                                t.setText("You win!!!");
-                            }else if(rcapScore<otherScore){
-                                t.setText("You lose...");
-                            }else {
-                                t.setText("It's a tie.");
-                            }
-
-                        }
-                    }.start();
-
-                    clicked=true;
-                    startMatch.setText("Back to home");
-                }else{
-                    Intent main=new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(main);
-                    clicked=false;
-                }
-
-
-
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timer.start();
+                play.setEnabled(false);
+            }
+        });
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });
