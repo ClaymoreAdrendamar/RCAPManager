@@ -107,7 +107,7 @@ public class MatchSimulation extends AppCompatActivity {
         } else {
             //result =3;
             t.setText("Problématique..."+number);
-                break;
+
         }
 
         /*switch(result){
