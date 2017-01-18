@@ -96,17 +96,21 @@ public class MatchSimulation extends AppCompatActivity {
         }
 
         if(number > limit+tie){
-            result= 0;
+            //result= 0;
+            otherScore++;
         }
         else if(number<=limit+tie&&number>=limit-tie){
-            result= 1;
+            //result= 1;
         }else if (number < limit-tie){
-            result= 2;
+            rcapScore++;
+            //result= 2;
         } else {
-            result =3;
+            //result =3;
+            t.setText("Problématique..."+number);
+                break;
         }
 
-        switch(result){
+        /*switch(result){
             case 0:
                 otherScore++;
                 break;
@@ -118,7 +122,7 @@ public class MatchSimulation extends AppCompatActivity {
             case 3:
                 t.setText("Problématique..."+number);
                 break;
-        }
+        }*/
 
     }
 }
