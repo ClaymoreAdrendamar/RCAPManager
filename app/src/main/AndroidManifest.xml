@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MatchSimulation"></activity>
+        <activity android:name=".MatchSimulation" />
+        <activity android:name=".Simulation"></activity>
     </application>
 
 </manifest>

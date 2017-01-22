@@ -72,15 +72,10 @@ public class MatchSimulation extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timer.start();
-                play.setEnabled(false);
-            }
-        });
-        pause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
             }
         });
+
 
 
     }
@@ -132,5 +127,7 @@ public class MatchSimulation extends AppCompatActivity {
                 break;
         }*/
 
-    }
+
+
+        }
 }

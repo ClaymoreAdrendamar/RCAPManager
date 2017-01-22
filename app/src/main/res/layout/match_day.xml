@@ -24,17 +24,83 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:text="Start simulation"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/button"
-            android:layout_weight="1" />
+            android:layout_weight="1">
+
+            <Button
+                android:text="Play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notplay"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pause"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Home"
+                android:layout_weight="1" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"></LinearLayout>
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_weight="0.34"
+                android:textSize="50sp"
+                android:text="Simulating..." />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.34">
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Rcap"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:text="-"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:layout_weight="1"
+                    android:textSize="50sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notRcap"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

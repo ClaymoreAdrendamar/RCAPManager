@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         changeScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent match=new Intent(getApplicationContext(), MatchSimulation.class);
+                Intent match=new Intent(getApplicationContext(), Simulation.class);
                 startActivity(match);
             }
         });

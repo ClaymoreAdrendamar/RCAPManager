@@ -1,106 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="74dp">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="74dp">
 
-        <TextView
-            android:text="It's match day!"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/textView2"
-            android:layout_weight="1"
-            android:textSize="45sp"
-            android:textAlignment="center"
-            android:textStyle="normal|bold|italic" />
-    </LinearLayout>
+    <TextView
+        android:text="It's match day!"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/textView2"
+        android:layout_weight="1"
+        android:textSize="45sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold|italic" />
+</LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="Start simulation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:text="Play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/play"
-                android:layout_weight="1" />
-
-            <Button
-                android:text="Pause"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pause"
-                android:layout_weight="1" />
-
-            <Button
-                android:text="Home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/Home"
-                android:layout_weight="1" />
-        </LinearLayout>
+            android:id="@+id/button"
+            android:layout_weight="1" />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView"
-                android:layout_weight="0.34"
-                android:textSize="50sp"
-                android:text="Simulating..." />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.34">
-
-                <TextView
-                    android:text="0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Rcap"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="50sp" />
-
-                <TextView
-                    android:text="-"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView6"
-                    android:layout_weight="1"
-                    android:textSize="50sp"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:text="0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/notRcap"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="50sp" />
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_weight="1"></LinearLayout>
     </LinearLayout>
 </LinearLayout>
+

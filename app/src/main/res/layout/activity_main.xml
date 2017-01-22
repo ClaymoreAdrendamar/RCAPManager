@@ -17,12 +17,13 @@
 
         <!-- Name 25%-->
         <TextView
-            android:text="Joseph"
+            android:text="Eliott Dugois"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/Name"
             android:layout_weight="2.5"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="normal|italic" />
 
         <!-- Cash 20%-->
         <LinearLayout
@@ -113,25 +114,24 @@
                 android:layout_margin="5dp" />
 
             <TextView
-                android:text="Changing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="114dp"
-                android:id="@+id/textView5"
-                android:textAlignment="center"
-                android:textStyle="normal|bold"
-                android:textSize="24sp"
-                android:layout_alignTop="@+id/Changing_Room"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
                 android:text="Rooms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4"
                 android:textStyle="normal|bold"
                 android:textSize="24sp"
-                android:layout_below="@+id/textView5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="Changing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textAlignment="center"
+                android:textStyle="normal|bold"
+                android:textSize="24sp"
+                android:layout_above="@+id/textView4"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
@@ -146,7 +146,7 @@
             <!-- Background -->
             <ImageView
 
-                android:backgroundTint="#c900fb"
+                android:tint="#c900fb"
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
