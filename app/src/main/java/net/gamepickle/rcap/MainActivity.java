@@ -1,40 +1,62 @@
 package net.gamepickle.rcap;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.support.v4.util.Pair;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    GameVariables gameVariables;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        gameVariables = new GameVariables(this);
+/**
+ * Created by Joseph on 21/12/2016.
+ */
 
-        gameVariables.setPlayer_stats(50);
-        gameVariables.setPlayer_happiness(50);
+public class GameVariables{
+    private SharedPreferences settings;
+    private SharedPreferences.Editor editor;
+    Context context;
 
-        ImageButton changeScreen = (ImageButton) findViewById(R.id.Changing_Room);
+    public GameVariables(Context context) {
+        String file_name = "Stats";
+        this.context = context;
 
-        changeScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent match=new Intent(getApplicationContext(), Simulation.class);
-                startActivity(match);
-            }
-        });
+        // Stats file name
+        // {"CASH": int cash; "POPULARITY": int popularity;
+        // "PLAYER_STATS": int player_stats; "NAME": string name
+
+        settings = context.getSharedPreferences(file_name, Context.MODE_PRIVATE);
+        editor = settings.edit();
+
     }
 
+    private void setText(int id, String text) {
+        TextView t = (TextView) ((Activity) context).findViewById(id);
+        t.setText(text);
+    }
 
+    public int getInt(String key) {
+        return settings.getInt(key, 0);
+    }
 
+    public void setInt(String key, int amount) {
+        editor.putInt(key, amount);
+        editor.commit();
+    }
 
+    public void setInt(String key, int amount, int id) {
+        setInt(key, amount);
+        setText(id, String.valueOf(amount));
+    }
 
+    public String getString(String key) {
+        return settings.getString(key, "");
+    }
+
+    public void setString(String key, String text) {
+        editor.putString(key, text);
+        editor.commit();
+    }
+
+    public void setString(String key, String text, int id) {
+        setString(key, text);
+        setText(id, text);
+    }
 }
