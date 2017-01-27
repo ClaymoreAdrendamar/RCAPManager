@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MatchSimulation" />
-        <activity android:name=".Simulation"></activity>
+        <activity android:name=".Simulation" />
+        <activity android:name=".ChangingRooms"></activity>
     </application>
 
 </manifest>

@@ -80,6 +80,67 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="-"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rcapMoins"
+                    android:layout_weight="1"
+                    android:onClick="pressedrcapMinus"/>
+
+                <TextView
+                    android:text="50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/newRcapStat"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:text="+"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rcapPlus"
+                    android:layout_weight="1"
+                    android:onClick="pressedRcapPlus"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.18">
+
+                <Button
+                    android:text="-"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/otherMoins"
+                    android:layout_weight="1"
+                    android:onClick="pressedOtherMinus"/>
+
+                <TextView
+                    android:text="50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/newOtherStat"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:text="+"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/otherPlus"
+                    android:layout_weight="1"
+                    android:onClick="pressedOtherPlus"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5">
 

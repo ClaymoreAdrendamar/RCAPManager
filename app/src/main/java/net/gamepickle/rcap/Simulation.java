@@ -24,12 +24,15 @@ public class Simulation extends AppCompatActivity {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simulation);
 
         Button forfeit = (Button) findViewById(R.id.forfeit);
+
 
 
 
@@ -41,6 +44,12 @@ public class Simulation extends AppCompatActivity {
                 startActivity(home);
             }
         });
+
+
+
+
+
+
 
 
 
@@ -116,5 +125,27 @@ public class Simulation extends AppCompatActivity {
 
 
 
+    }
+
+    public void pressedrcapMinus(View view){
+        TextView rcapNewScore = (TextView) findViewById(R.id.newRcapStat);
+        rcapStats--;
+        rcapNewScore.setText(rcapStats+"");
+    }
+    public void pressedRcapPlus(View view){
+        TextView rcapNewScore = (TextView) findViewById(R.id.newRcapStat);
+        rcapStats++;
+        rcapNewScore.setText(rcapStats+"");
+    }
+    public void pressedOtherMinus(View view){
+        TextView otherNewScore = (TextView) findViewById(R.id.newOtherStat);
+        otherTeamStats--;
+        otherNewScore.setText(otherTeamStats+"");
+    }
+
+    public void pressedOtherPlus(View view){
+        TextView otherNewScore = (TextView) findViewById(R.id.newOtherStat);
+        otherTeamStats++;
+        otherNewScore.setText(otherTeamStats+"");
     }
 }
